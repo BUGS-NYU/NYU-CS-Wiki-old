@@ -19,6 +19,7 @@ const LandingPageGradient = styled.div`
   background: linear-gradient(215.53deg, #6f3ecf 11.68%, #c47bf2 103.31%),
     #894fd9;
   height: calc(100vh - 4rem);
+  z-index: -2;
 `;
 
 const LeftTriangleSvg = styled(LeftTriangle)`
@@ -27,6 +28,7 @@ const LeftTriangleSvg = styled(LeftTriangle)`
   left: 0;
   width: 75%;
   height: 45%;
+  z-index: -1;
 `;
 
 const RightTriangleSvg = styled(RightTriangle)`
@@ -35,6 +37,7 @@ const RightTriangleSvg = styled(RightTriangle)`
   right: 0;
   width: 75%;
   height: 45%;
+  z-index: -1;
 `;
 
 const Footer = styled.footer`

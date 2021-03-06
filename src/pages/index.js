@@ -12,6 +12,7 @@ const IndexPage = () => (
     <Link to="/home" style={{ textDecoration: "none" }}>
       <CallToActionText>Get Started</CallToActionText>
     </Link>
+    <FakePaper />
   </Layout>
 );
 
@@ -63,6 +64,17 @@ const CallToActionText = styled.h3`
     visibility: visible;
     transform: scaleX(1);
   }
+`;
+
+const FakePaper = styled.div`
+  background: #f9f9f9;
+  box-shadow: -30px 0px 30px rgba(0, 0, 0, 0.15),
+    0px -30px 60px rgba(0, 0, 0, 0.15), 30px 0px 40px rgba(0, 0, 0, 0.15);
+  width: 50%;
+
+  // TODO ! Fix this since it isnt a perfect styling fix for our design.
+  height: 56vh;
+  margin: 5rem auto;
 `;
 
 export default IndexPage;
