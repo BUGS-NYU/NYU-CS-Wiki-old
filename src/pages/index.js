@@ -12,7 +12,7 @@ const IndexPage = () => (
     <Link to="/home" style={{ textDecoration: "none" }}>
       <CallToActionText>Get Started</CallToActionText>
     </Link>
-    <FakePaper />
+    <FakePaper>{/* Put a fake version of a guide post in here */}</FakePaper>
   </Layout>
 );
 
