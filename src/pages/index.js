@@ -71,6 +71,7 @@ const FakePaper = styled.div`
     0px -30px 60px rgba(0, 0, 0, 0.15), 30px 0px 40px rgba(0, 0, 0, 0.15);
   width: 60%;
 
+  // ! This height should work on every viewport. It doesn't right now.
   height: 56vh;
   margin: 5rem auto;
   z-index: 1;

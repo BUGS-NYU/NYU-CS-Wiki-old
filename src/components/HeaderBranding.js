@@ -37,6 +37,7 @@ const SiteName = styled.h1`
     color: #ffffff;
     position: relative;
     padding: 0.05rem 0.4rem;
+    bottom: 0.1rem;
     font-family: Roboto;
     font-weight: 500;
     font-size: 0.8rem;
