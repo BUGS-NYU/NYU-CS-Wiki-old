@@ -23,6 +23,14 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   padding: 0 6rem;
   margin-bottom: 1rem;
+
+  a,
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+  }
 `;
 
 export default Header;
