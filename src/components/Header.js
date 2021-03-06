@@ -61,6 +61,8 @@ const LandingPageLink = styled.a`
   font-weight: 300;
   font-size: 0.8rem;
   margin: 0 1rem;
+
+  // ! Add a hover state for these
 `;
 
 const Separator = styled.span`
