@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "nyu-cs-resources",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A centralized hub for NYU CS resources",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "BUGS@NYU",
   "dependencies": {
     "gatsby": "^3.0.1",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
@@ -25,7 +25,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -40,6 +40,6 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/BUGS-NYU/cs-resources/issues"
   }
 }
