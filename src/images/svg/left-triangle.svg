@@ -1,0 +1,9 @@
+<svg viewBox="0 0 1903 694" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio='xMinYMin'>
+  <path opacity="0.2" d="M-3 0L1903 698H-3V0Z" fill="url(#paintl_linear)" />
+  <defs>
+    <linearGradient id="paintl_linear" x1="950" y1="0" x2="950" y2="698" gradientUnits="userSpaceOnUse">
+      <stop stopColor="#C4C4C4" />
+      <stop offset="1" stopColor="#C4C4C4" stopOpacity="0" />
+    </linearGradient>
+  </defs>
+</svg>
