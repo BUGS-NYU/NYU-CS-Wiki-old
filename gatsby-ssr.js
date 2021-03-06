@@ -31,11 +31,11 @@ function setColorsByTheme() {
 
   Object.entries(colors[colorMode]).forEach(([name, colorByTheme]) => {
     const cssVar = `--color-${name}`;
-    root.style.setPropety(cssVar, colorByTheme);
+    root.style.setProperty(cssVar, colorByTheme);
   });
 }
 
-const DarkModeScript = async () => {
+const DarkModeScript = () => {
   const boundFn = String(setColorsByTheme).replace(
     '"🌈"',
     JSON.stringify(COLORS)
