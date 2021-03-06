@@ -1,10 +1,10 @@
 import * as React from "react";
-import styled from "styled-components";
 // import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./Header";
 import { ThemeProvider } from "./ThemeContext";
 import GlobalStyles from "./GlobalStyles";
+import LandingPageBackground from "./LandingPageBackground";
 
 import "fontsource-poppins/600.css";
 import "fontsource-poppins/500.css";
@@ -57,11 +57,5 @@ const Layout = ({ children, isLandingPage = false }) => {
     </ThemeProvider>
   );
 };
-
-const LandingPageBackground = styled.div`
-  background: linear-gradient(215.53deg, #6f3ecf 11.68%, #c47bf2 103.31%),
-    #894fd9;
-  height: auto;
-`;
 
 export default Layout;
