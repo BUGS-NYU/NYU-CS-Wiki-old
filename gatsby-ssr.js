@@ -1,7 +1,5 @@
 import React from "react";
 
-import App from "./src/components/App";
-
 import COLORS from "./src/utils/theme";
 
 // Code to prevent flashing of Dark Mode adapted from
@@ -72,8 +70,4 @@ const FallbackStyles = () => {
 export const onRenderBody = ({ setPreBodyComponents, setHeadComponents }) => {
   setHeadComponents(<FallbackStyles />);
   setPreBodyComponents(<DarkModeScript />);
-};
-
-export const wrapPageElement = ({ element }) => {
-  return <App>{element}</App>;
 };

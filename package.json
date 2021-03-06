@@ -17,6 +17,7 @@
     "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-plugin-offline": "^4.0.0",
     "gatsby-plugin-react-helmet": "^4.0.0",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^3.0.0",
     "gatsby-redirect-from": "^0.3.0",
     "gatsby-remark-autolink-headers": "^3.0.0",
