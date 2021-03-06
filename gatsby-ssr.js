@@ -1,5 +1,6 @@
 import React from "react";
-import Terser from "terser";
+
+import App from "./src/components/App";
 
 import COLORS from "./src/utils/theme";
 
@@ -28,21 +29,19 @@ function setColorsByTheme() {
 
   root.style.setProperty("--initial-color-mode", colorMode);
 
-  Object.entries(colors).forEach(([name, colorByTheme]) => {
+  Object.entries(colors[colorMode]).forEach(([name, colorByTheme]) => {
     const cssVar = `--color-${name}`;
-    root.style.setProperty(cssVar, colorByTheme[colorMode]);
+    root.style.setPropety(cssVar, colorByTheme);
   });
 }
 
-const DarkModeScript = () => {
+const DarkModeScript = async () => {
   const boundFn = String(setColorsByTheme).replace(
-    "'🌈'",
+    '"🌈"',
     JSON.stringify(COLORS)
   );
 
-  let clientCode = `(${boundFn})()`;
-
-  clientCode = Terser.minity(clientCode).code;
+  const clientCode = `(${boundFn})()`;
 
   // eslint-disable-next-line react/no-danger
   return <script dangerouslySetInnerHTML={{ __html: clientCode }} />;
@@ -58,9 +57,9 @@ const DarkModeScript = () => {
  */
 const FallbackStyles = () => {
   // programatically create css variables from color list and use light by default
-  const cssVariableString = Object.entries(COLORS).reduce(
+  const cssVariableString = Object.entries(COLORS.light).reduce(
     (acc, [name, colorByTheme]) => {
-      return `${acc}\n--color-${name}: ${colorByTheme.light};`;
+      return `${acc}\n--color-${name}: ${colorByTheme};`;
     },
     ""
   );
@@ -73,4 +72,8 @@ const FallbackStyles = () => {
 export const onRenderBody = ({ setPreBodyComponents, setHeadComponents }) => {
   setHeadComponents(<FallbackStyles />);
   setPreBodyComponents(<DarkModeScript />);
+};
+
+export const wrapPageElement = ({ element }) => {
+  return <App>{element}</App>;
 };

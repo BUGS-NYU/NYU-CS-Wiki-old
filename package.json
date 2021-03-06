@@ -6,6 +6,8 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "fontsource-poppins": "^4.0.0",
+    "fontsource-roboto": "^4.0.0",
     "gatsby": "^3.0.1",
     "gatsby-plugin-catch-links": "^3.0.0",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
@@ -25,7 +27,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "terser": "^5.6.0"
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "eslint-config-prettier": "^8.1.0",
