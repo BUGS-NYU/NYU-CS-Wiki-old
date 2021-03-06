@@ -36,7 +36,6 @@ const SiteName = styled.h1`
       isLanding ? "#432E60" : "var(--color-secondary)"};
     color: #ffffff;
     position: relative;
-    bottom: 0.15rem;
     padding: 0.05rem 0.4rem;
     font-family: Roboto;
     font-weight: 500;
