@@ -56,4 +56,4 @@ module.exports = {
     `gatsby-plugin-meta-redirect`,
     `gatsby-plugin-catch-links`, // allows for replacement of links within mdx files
   ],
-}
+};
