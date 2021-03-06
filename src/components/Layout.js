@@ -32,9 +32,7 @@ const Layout = ({ children, isLandingPage = false }) => {
         <LandingPageBackground>
           <GlobalStyles />
           <Header isLandingPage={isLandingPage} />
-          <div>
-            <main>{children}</main>
-          </div>
+          <main>{children}</main>
         </LandingPageBackground>
       </ThemeProvider>
     );

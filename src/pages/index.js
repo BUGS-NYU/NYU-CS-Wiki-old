@@ -44,7 +44,6 @@ const CallToActionText = styled.h3`
   margin: auto;
   padding: 10px 0;
 
-  // This can be changed. I just added it to give the homepage some better UX and animation
   border-bottom: 2px solid #ffffff;
 
   &::before {
@@ -70,11 +69,12 @@ const FakePaper = styled.div`
   background: #f9f9f9;
   box-shadow: -30px 0px 30px rgba(0, 0, 0, 0.15),
     0px -30px 60px rgba(0, 0, 0, 0.15), 30px 0px 40px rgba(0, 0, 0, 0.15);
-  width: 50%;
+  width: 60%;
 
-  // TODO ! Fix this since it isnt a perfect styling fix for our design.
   height: 56vh;
   margin: 5rem auto;
+  z-index: 1;
+  position: relative;
 `;
 
 export default IndexPage;
