@@ -10,7 +10,21 @@ const Header = ({ isLandingPage = false }) => (
       <HeaderBranding isLandingPage={isLandingPage} />
     </Link>
     {/* Add any other options in the header below */}
-    {/* <span>search...</span> */}
+    {isLandingPage ? (
+      <div>
+        <LandingPageLink href="/home">How do I Contribute?</LandingPageLink>
+        <Separator>|</Separator>
+        <LandingPageLink href="https://github.com/BUGS-NYU/cs-resources">
+          Github
+        </LandingPageLink>
+        <Separator>|</Separator>
+        <LandingPageLink href="https://bugs-nyu.github.io">
+          BUGS@NYU
+        </LandingPageLink>
+      </div>
+    ) : (
+      <React.Fragment />
+    )}
   </HeaderContainer>
 );
 
@@ -20,6 +34,7 @@ const HeaderContainer = styled.header`
       ? `
     background-color: var(--color-headerBg);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
   `
       : ""}
 
@@ -38,6 +53,19 @@ const HeaderContainer = styled.header`
   a:active {
     text-decoration: none;
   }
+`;
+
+const LandingPageLink = styled.a`
+  color: #ffffff;
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: 0 1rem;
+`;
+
+const Separator = styled.span`
+  color: #ffffff;
+  opacity: 0.3;
 `;
 
 export default Header;

@@ -9,9 +9,12 @@ const IndexPage = () => (
   <Layout isLandingPage>
     <SEO title="Home" />
     <HeroTitle>Academic&nbsp;&amp;&nbsp;Career Knowledge&nbsp;Base</HeroTitle>
-    <Link to="/home" style={{ textDecoration: "none" }}>
-      <CallToActionText>Get Started</CallToActionText>
-    </Link>
+    <CallToActionText>
+      <Link to="/home" style={{ textDecoration: "none", color: "#FFFFFF" }}>
+        Get Started
+      </Link>
+    </CallToActionText>
+
     <FakePaper>{/* Put a fake version of a guide post in here */}</FakePaper>
   </Layout>
 );
@@ -32,7 +35,6 @@ const HeroTitle = styled.h2`
 `;
 
 const CallToActionText = styled.h3`
-  color: #ffffff;
   font-family: Poppins, sans-serif;
   font-weight: 500;
   font-size: 1.8rem;
