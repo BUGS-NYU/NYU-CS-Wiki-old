@@ -1,12 +1,5 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react";
-import PropTypes from "prop-types";
+import styled from "styled-components";
 // import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./Header";
@@ -20,7 +13,7 @@ import "fontsource-poppins/300.css";
 import "fontsource-roboto/500.css";
 import "fontsource-roboto/400.css";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isLandingPage = false }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -30,6 +23,20 @@ const Layout = ({ children }) => {
   //     }
   //   }
   // `);
+
+  if (isLandingPage) {
+    return (
+      <ThemeProvider>
+        <LandingPageBackground>
+          <GlobalStyles />
+          <Header isLandingPage={isLandingPage} />
+          <div>
+            <main>{children}</main>
+          </div>
+        </LandingPageBackground>
+      </ThemeProvider>
+    );
+  }
 
   return (
     <ThemeProvider>
@@ -51,8 +58,10 @@ const Layout = ({ children }) => {
   );
 };
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const LandingPageBackground = styled.div`
+  background: linear-gradient(215.53deg, #6f3ecf 11.68%, #c47bf2 103.31%),
+    #894fd9;
+  height: auto;
+`;
 
 export default Layout;
