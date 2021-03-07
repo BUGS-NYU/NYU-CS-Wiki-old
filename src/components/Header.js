@@ -11,8 +11,21 @@ const Header = ({ isLandingPage = false }) => (
       <HeaderBranding isLandingPage={isLandingPage} />
     </Link>
     {/* Add any other options in the header below */}
-    {/* <span>search...</span> */}
-    {isLandingPage ? null : <SearchBar />}
+    {isLandingPage ? (
+      <div>
+        <LandingPageLink href="/home">How do I Contribute?</LandingPageLink>
+        <Separator>|</Separator>
+        <LandingPageLink href="https://github.com/BUGS-NYU/cs-resources">
+          Github
+        </LandingPageLink>
+        <Separator>|</Separator>
+        <LandingPageLink href="https://bugs-nyu.github.io">
+          BUGS@NYU
+        </LandingPageLink>
+      </div>
+    ) : (
+      <SearchBar />
+    )}
   </HeaderContainer>
 );
 
@@ -40,6 +53,21 @@ const HeaderContainer = styled.header`
   a:active {
     text-decoration: none;
   }
+`;
+
+const LandingPageLink = styled.a`
+  color: #ffffff;
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: 0 1rem;
+
+  // ! Add a hover state for these
+`;
+
+const Separator = styled.span`
+  color: #ffffff;
+  opacity: 0.3;
 `;
 
 export default Header;

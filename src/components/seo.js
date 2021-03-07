@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            themeColor
           }
         }
       }
@@ -53,12 +54,25 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:site_name`,
+          content: `NYU CS Wiki`,
+        },
+        // TODO: design an image for SEO
+        // {
+        //   property: `og:image`,
+        //   content: ``
+        // },
+        {
+          property: `theme-color`,
+          content: site.siteMetadata?.themeColor,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata?.author,
         },
         {
           name: `twitter:title`,

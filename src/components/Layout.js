@@ -1,4 +1,5 @@
 import * as React from "react";
+
 // import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./Header";
@@ -6,6 +7,7 @@ import { ThemeProvider } from "./ThemeContext";
 import GlobalStyles from "./GlobalStyles";
 import LandingPageBackground from "./LandingPageBackground";
 
+import "fontsource-poppins/700.css";
 import "fontsource-poppins/600.css";
 import "fontsource-poppins/500.css";
 import "fontsource-poppins/400.css";
@@ -30,9 +32,7 @@ const Layout = ({ children, isLandingPage = false }) => {
         <LandingPageBackground>
           <GlobalStyles />
           <Header isLandingPage={isLandingPage} />
-          <div>
-            <main>{children}</main>
-          </div>
+          <main>{children}</main>
         </LandingPageBackground>
       </ThemeProvider>
     );
