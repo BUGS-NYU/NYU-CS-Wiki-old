@@ -3,31 +3,29 @@ import styled from "styled-components";
 
 import searchIcon from "../images/svg/search.svg";
 
-const SearchBar = () => {
-  const [query, setQuery] = React.useState("");
-
-  const onChange = event => {
-    console.log(event.target.value);
-    setQuery(event.target.value);
-  };
+// ? Checkout this for search results https://github.com/algolia/react-instantsearch/
+const SearchBar = ({ handleSearch = f => f, focusref, onFocus }) => {
   return (
     <SearchContainer>
       <SearchIcon />
-      <Bar
-        type="test"
+      <SearchInput
+        type="text"
+        aria-label="Search"
         placeholder="Search for courses or content"
-        onChange={onChange}
+        onChange={e => handleSearch(e.target.value)}
+        onFocus={onFocus}
+        ref={focusref}
       />
     </SearchContainer>
   );
 };
 
-const SearchContainer = styled.div`
+const SearchContainer = styled.form`
   display: flex;
   width: 80%;
 `;
 
-const Bar = styled.input`
+const SearchInput = styled.input`
   width: 100%;
   font-family: Roboto;
   font-size: 1rem;

@@ -3,6 +3,8 @@ module.exports = {
     title: `NYU CS Resources`,
     description: `A centralized hub for NYU CS resources`,
     author: `bugsnyu@gmail.com`,
+    themeColor: `8041B7`,
+    // siteUrl: `https://nyu.wiki`
   },
   plugins: [
     {
@@ -12,6 +14,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

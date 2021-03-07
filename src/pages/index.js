@@ -7,7 +7,7 @@ import SEO from "../components/seo";
 
 const IndexPage = () => (
   <Layout isLandingPage>
-    <SEO title="Home" />
+    <SEO title="Landing" />
     <HeroTitle>Academic&nbsp;&amp;&nbsp;Career Knowledge&nbsp;Base</HeroTitle>
     <CallToActionText>
       <Link to="/home" style={{ textDecoration: "none", color: "#FFFFFF" }}>
