@@ -16,6 +16,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   text-decoration: none;
+  min-width: 160px;
 `;
 
 const WikiLogo = styled(Logo)`

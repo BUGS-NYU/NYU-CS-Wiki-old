@@ -1,11 +1,11 @@
 import * as React from "react";
-
-// import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
 
 import Header from "./Header";
 import { ThemeProvider } from "./ThemeContext";
 import GlobalStyles from "./GlobalStyles";
 import LandingPageBackground from "./LandingPageBackground";
+import SideBar from "./Sidebar";
 
 import "fontsource-poppins/700.css";
 import "fontsource-poppins/600.css";
@@ -16,16 +16,6 @@ import "fontsource-roboto/500.css";
 import "fontsource-roboto/400.css";
 
 const Layout = ({ children, isLandingPage = false }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `);
-
   if (isLandingPage) {
     return (
       <ThemeProvider>
@@ -42,20 +32,26 @@ const Layout = ({ children, isLandingPage = false }) => {
     <ThemeProvider>
       <GlobalStyles />
       <Header />
-      {/* <div>
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div> */}
+      <Main>
+        <SideBar />
+        <ContentWrapper>{children}</ContentWrapper>
+      </Main>
     </ThemeProvider>
   );
 };
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 4rem);
+`;
+
+const ContentWrapper = styled.div`
+  flex-grow: 1;
+  display: inline-block;
+  background: var(--color-body);
+  box-shadow: -3px 0px 6px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+`;
 
 export default Layout;

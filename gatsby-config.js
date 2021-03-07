@@ -66,7 +66,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
     // `gatsby-redirect-from`, // allows for redirection to pages (if needed)
     // `gatsby-plugin-meta-redirect`,
     // `gatsby-plugin-catch-links`, // allows for replacement of links within mdx files

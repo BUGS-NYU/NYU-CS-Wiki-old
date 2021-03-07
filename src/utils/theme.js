@@ -3,6 +3,9 @@ const light = {
   text: "#000000",
   secondary: "#8041B7",
   headerBg: "#FFFFFF",
+  sidebarBg: "#FBFBFB",
+  outerBulletPoint: "#B5B5B5",
+  innerBulletPoint: "#E0E0E0",
   // ... other light theme colors
 };
 
@@ -11,6 +14,9 @@ const dark = {
   text: "#FFFFFF",
   secondary: "#8041B7",
   headerBg: "#161A1F",
+  sidebarBg: "#0F1217",
+  outerBulletPoint: "#87888B",
+  innerBulletPoint: "#3F4145",
   // ... other dark theme colors
 };
 

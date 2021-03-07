@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 import HeaderBranding from "./HeaderBranding";
-import SearchBar from "./SearhBar";
+import SearchBar from "./SearchBar";
 
 const Header = ({ isLandingPage = false }) => (
   <HeaderContainer isLandingPage={isLandingPage}>
@@ -44,7 +44,8 @@ const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 0 6rem;
-  margin-bottom: 1rem;
+  position: relative;
+  z-index: 3;
 
   a,
   a:link,
