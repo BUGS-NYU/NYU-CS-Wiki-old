@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 import HeaderBranding from "./HeaderBranding";
+import SearchBar from "./SearhBar";
 
 const Header = ({ isLandingPage = false }) => (
   <HeaderContainer isLandingPage={isLandingPage}>
@@ -23,7 +24,7 @@ const Header = ({ isLandingPage = false }) => (
         </LandingPageLink>
       </div>
     ) : (
-      <React.Fragment />
+      <SearchBar />
     )}
   </HeaderContainer>
 );
@@ -34,7 +35,6 @@ const HeaderContainer = styled.header`
       ? `
     background-color: var(--color-headerBg);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    justify-content: space-between;
   `
       : ""}
 

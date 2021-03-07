@@ -42,7 +42,7 @@ const Layout = ({ children, isLandingPage = false }) => {
     <ThemeProvider>
       <GlobalStyles />
       <Header />
-      <div>
+      {/* <div>
         <main>{children}</main>
         <footer
           style={{
@@ -53,7 +53,7 @@ const Layout = ({ children, isLandingPage = false }) => {
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
-      </div>
+      </div> */}
     </ThemeProvider>
   );
 };
