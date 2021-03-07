@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 import Layout from "../components/Layout";
+import Terminal from "../components/Terminal";
 import SEO from "../components/seo";
 
 const IndexPage = () => (
@@ -15,7 +16,21 @@ const IndexPage = () => (
       </Link>
     </CallToActionText>
 
-    <FakePaper>{/* Put a fake version of a guide post in here */}</FakePaper>
+    <FakePaper>
+      <Title>#Guides</Title>
+      <GuideTitle>
+        <a href="/linktoguidesomewhere">Getting Started With Open Source</a>
+      </GuideTitle>
+      <Title>Introduction</Title>
+      <Paragraph>
+        A collection of course testimonials, guides, career prep resources, and
+        much more! BUGS@NYU believes these resources should be available to the
+        CS community at NYU both at CAS and Tandon for students to prepare for
+        their career.
+      </Paragraph>
+      <Title>Code</Title>
+      <Terminal />
+    </FakePaper>
   </Layout>
 );
 
@@ -74,10 +89,35 @@ const FakePaper = styled.div`
   width: 60%;
 
   // ! This height should work on every viewport. It doesn't right now.
-  height: 56vh;
+  min-height: 56vh;
   margin: 5rem auto 0 auto;
+  padding: 1.5rem 2rem;
   z-index: 1;
   position: relative;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Title = styled.h1`
+  font-size: 1.25rem;
+  opacity: 0.5;
+  font-weight: 500;
+`;
+
+const GuideTitle = styled.h1`
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+
+  a {
+    text-decoration: none;
+    color: var(--background);
+  }
+`;
+
+const Paragraph = styled.p`
+  font-size: 1rem;
+  margin: 1.25rem 0;
 `;
 
 export default IndexPage;
