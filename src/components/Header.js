@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 import HeaderBranding from "./HeaderBranding";
+import SearchBar from "./SearhBar";
 
 const Header = ({ isLandingPage = false }) => (
   <HeaderContainer isLandingPage={isLandingPage}>
@@ -11,6 +12,7 @@ const Header = ({ isLandingPage = false }) => (
     </Link>
     {/* Add any other options in the header below */}
     {/* <span>search...</span> */}
+    {isLandingPage ? null : <SearchBar />}
   </HeaderContainer>
 );
 
