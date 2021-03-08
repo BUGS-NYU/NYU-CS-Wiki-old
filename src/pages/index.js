@@ -3,36 +3,43 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 import Layout from "../components/Layout";
-import Terminal from "../components/Terminal";
+import CodeBlock from "../components/CodeBlock/index";
 import SEO from "../components/seo";
 
-const IndexPage = () => (
-  <Layout isLandingPage>
-    <SEO title="Landing" />
-    <HeroTitle>Academic&nbsp;&amp;&nbsp;Career Knowledge&nbsp;Base</HeroTitle>
-    <CallToActionText>
-      <Link to="/home" style={{ textDecoration: "none", color: "#FFFFFF" }}>
-        Get Started
-      </Link>
-    </CallToActionText>
+const IndexPage = () => {
+  const textBlock = `/* In general, you'll need to first fork the repository to your own account, then clone it to your own computer with */
+  git clone https://github.com/YOUR-USER-NAME/nyu-wiki.github.io.git
+  /* Next you'll want to set up your local master branch to track your forked repository. You can do this with: */
+  git branch set-url --push origin https://github.com/YOUR-USER-NAME/nyu.wiki.github.io.git
+  git branch -u origin/master`;
+  return (
+    <Layout isLandingPage>
+      <SEO title="Landing" />
+      <HeroTitle>Academic&nbsp;&amp;&nbsp;Career Knowledge&nbsp;Base</HeroTitle>
+      <CallToActionText>
+        <Link to="/home" style={{ textDecoration: "none", color: "#FFFFFF" }}>
+          Get Started
+        </Link>
+      </CallToActionText>
 
-    <FakePaper>
-      <Title>#Guides</Title>
-      <GuideTitle>
-        <a href="/linktoguidesomewhere">Getting Started With Open Source</a>
-      </GuideTitle>
-      <Title>Introduction</Title>
-      <Paragraph>
-        A collection of course testimonials, guides, career prep resources, and
-        much more! BUGS@NYU believes these resources should be available to the
-        CS community at NYU both at CAS and Tandon for students to prepare for
-        their career.
-      </Paragraph>
-      <Title>Code</Title>
-      <Terminal />
-    </FakePaper>
-  </Layout>
-);
+      <FakePaper>
+        <Title>#Guides</Title>
+        <GuideTitle>
+          <a href="/linktoguidesomewhere">Getting Started With Open Source</a>
+        </GuideTitle>
+        <Title>Introduction</Title>
+        <Paragraph>
+          A collection of course testimonials, guides, career prep resources,
+          and much more! BUGS@NYU believes these resources should be available
+          to the CS community at NYU both at CAS and Tandon for students to
+          prepare for their career.
+        </Paragraph>
+        <Title>Code</Title>
+        <CodeBlock codeString={textBlock} language="git" isLandingPage={true}/>
+      </FakePaper>
+    </Layout>
+  );
+};
 
 const HeroTitle = styled.h2`
   color: #ffffff;

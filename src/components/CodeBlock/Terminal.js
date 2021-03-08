@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import forkIcon from "../images/svg/note.svg";
+import copyIcon from "../images/svg/note.svg";
 
 const Terminal = () => {
   return (
@@ -8,7 +8,7 @@ const Terminal = () => {
       <TerminalHeader>
         <Title> Terminal </Title>
         {/* No functionality as of right now. Just a placeholder */}
-        <ForkIcon />
+        <CopyIcon />
       </TerminalHeader>
       <InstructionContainer>
         <Instruction isHighlighted={false}>
