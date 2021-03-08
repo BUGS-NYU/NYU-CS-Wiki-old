@@ -1,6 +1,8 @@
 import React from "react";
 
 import COLORS from "./src/utils/theme";
+import { wrapRootElement as wrap } from "./wrap-root-element"
+ 
 
 // Code to prevent flashing of Dark Mode adapted from
 // https://www.joshwcomeau.com/react/dark-mode/
@@ -71,3 +73,5 @@ export const onRenderBody = ({ setPreBodyComponents, setHeadComponents }) => {
   setHeadComponents(<FallbackStyles />);
   setPreBodyComponents(<DarkModeScript />);
 };
+
+export const wrapRootElement = wrap;
