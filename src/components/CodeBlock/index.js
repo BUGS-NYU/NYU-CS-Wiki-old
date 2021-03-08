@@ -1,12 +1,26 @@
 import * as React from "react";
-import { render } from "react-dom";
 import Highlight, { defaultProps } from "prism-react-renderer";
+import Confetti from "react-dom-confetti";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
-import Button from "./CopyButton";
+
+import { colors, isGitCommand, isComment } from "../CodeBlock/util";
+import Button from "./Button";
 import styled from "styled-components";
 
-const CodeBlock = ({ codeString, language, isLandingPage, ...props }) => {
+const CodeBlock = ({ codeString, language, ...props }) => {
   const [isCopied, setIsCopied] = React.useState(false);
+
+  const copyToClipboard = str => {
+    const el = document.createElement("textarea");
+    el.value = str;
+    el.setAttribute("readonly", "");
+    el.style.position = "absolute";
+    el.style.left = "-9999px";
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+  };
 
   if (props["react-live"]) {
     return (
@@ -18,36 +32,87 @@ const CodeBlock = ({ codeString, language, isLandingPage, ...props }) => {
     );
   } else {
     return (
-      <Highlight {...defaultProps} code={codeString} language={language}>
-        {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <Terminal>
-            <TerminalHeader>
-              <Title>Terminal</Title>
-              <Button
-                onClick={() => {
-                  copyToClipboard(codeString);
-                  setIsCopied(true);
-                  setTimeout(() => setIsCopied(false), 3000);
-                }}
-              >
-                {isCopied ? "🎉 Copied!" : "Copy"}
-              </Button>
-            </TerminalHeader>
-            {tokens.map((line, i) => (
-              <Lines {...getLineProps({ line, key: i })}>
-                <LineNo>{i + 1}</LineNo>
-                {line.map((token, key) => {
-                  return (
-                  <Line {...getTokenProps({ token, key })} />
-                )})}
-              </Lines>
-            ))}
-          </Terminal>
-        )}
-      </Highlight>
+      <Wrapper>
+        <Highlight {...defaultProps} code={codeString} language={language}>
+          {({ className, style, tokens, getLineProps, getTokenProps }) => {
+            return (
+              <Terminal>
+                <TerminalHeader>
+                  <Title>Terminal</Title>
+                  <Button
+                    onClick={() => {
+                      copyToClipboard(codeString);
+                      setIsCopied(true);
+                      setTimeout(() => setIsCopied(false), 3000);
+                    }}
+                  >
+                    {isCopied ? "🎉 Copied!" : "Copy"}
+                  </Button>
+                </TerminalHeader>
+                {tokens.map((line, i) => (
+                  <Lines {...getLineProps({ line, key: i })}>
+                    <LineNo>{i + 1}</LineNo>
+                    {line.map((token, key) => {
+                      // handle our own custom coloring;
+                      if (isComment(token.content)) {
+                        return (
+                          <Line
+                            {...getTokenProps({ token, key })}
+                            type={"comment"}
+                          />
+                        );
+                      } else if (isGitCommand(token.content)) {
+                        const parsedTokens = token.content.split(" ");
+                        return parsedTokens.map((token, key) => {
+                          return (
+                            <Line
+                              children={`${token} `}
+                              type={token}
+                              key={key}
+                            />
+                          );
+                        });
+                      } else {
+                        return <Line {...getTokenProps({ token, key })} />;
+                      }
+                    })}
+                  </Lines>
+                ))}
+              </Terminal>
+            );
+          }}
+        </Highlight>
+        <ConfettiWrapper>
+          <Confetti active={isCopied} config={config} />
+        </ConfettiWrapper>
+      </Wrapper>
     );
   }
 };
+
+const config = {
+  angle: 90,
+  spread: 30,
+  startVelocity: 40,
+  elementCount: 50,
+  dragFriction: 0.12,
+  duration: 3000,
+  stagger: 3,
+  width: "5px",
+  height: "5px",
+  perspective: "600px",
+  colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+};
+
+const Wrapper = styled.div`
+  position: relative;
+`;
+
+const ConfettiWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+`;
 
 const Terminal = styled.pre`
   width: 100%;
@@ -67,6 +132,7 @@ const Terminal = styled.pre`
 
 const TerminalHeader = styled.div`
   border-bottom: 1px solid #ffffff;
+  padding-top: 0.25rem;
   padding-bottom: 0.75rem;
   margin-bottom: 1rem;
   display: flex;
@@ -76,7 +142,7 @@ const TerminalHeader = styled.div`
 const Title = styled.h1`
   font-size: 1rem;
   color: #ffffff;
-  font-weight: 300;
+  font-weight: 400;
 `;
 
 const Lines = styled.div`
@@ -96,8 +162,15 @@ const LineNo = styled.span`
 
 const Line = styled.span`
   font-size: 0.9rem;
-  // ${({isLandingPage, color}) => isLandingPage ? `
-  // color: ${color};`: "color: white !important;"}
+  color: ${({ type }) => {
+    if (type === "comment") {
+      return "#6c6783";
+    } else if (type in colors) {
+      return colors[type];
+    } else {
+      return "white!important";
+    }
+  }};
 `;
 
 export default CodeBlock;

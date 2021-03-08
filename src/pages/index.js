@@ -3,15 +3,16 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 import Layout from "../components/Layout";
-import CodeBlock from "../components/CodeBlock/index";
+import CodeBlock from "../components/CodeBlock";
 import SEO from "../components/seo";
 
 const IndexPage = () => {
   const textBlock = `/* In general, you'll need to first fork the repository to your own account, then clone it to your own computer with */
-  git clone https://github.com/YOUR-USER-NAME/nyu-wiki.github.io.git
-  /* Next you'll want to set up your local master branch to track your forked repository. You can do this with: */
-  git branch set-url --push origin https://github.com/YOUR-USER-NAME/nyu.wiki.github.io.git
-  git branch -u origin/master`;
+git clone https://github.com/YOUR-USER-NAME/nyu-wiki.github.io.git
+/* Next you'll want to set up your local master branch to track your forked repository. You can do this with: */
+git branch set-url --push origin https://github.com/YOUR-USER-NAME/nyu.wiki.github.io.git
+git branch -u origin/master`;
+
   return (
     <Layout isLandingPage>
       <SEO title="Landing" />
@@ -35,7 +36,7 @@ const IndexPage = () => {
           prepare for their career.
         </Paragraph>
         <Title>Code</Title>
-        <CodeBlock codeString={textBlock} language="git" isLandingPage={true}/>
+        <CodeBlock codeString={textBlock} language="Git" />
       </FakePaper>
     </Layout>
   );
