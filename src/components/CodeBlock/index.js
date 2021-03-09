@@ -34,7 +34,7 @@ const CodeBlock = ({ codeString, language, ...props }) => {
     return (
       <Wrapper>
         <Highlight {...defaultProps} code={codeString} language={language}>
-          {({ className, style, tokens, getLineProps, getTokenProps }) => {
+          {({ tokens, getLineProps, getTokenProps }) => {
             return (
               <Terminal>
                 <TerminalHeader>
@@ -50,6 +50,7 @@ const CodeBlock = ({ codeString, language, ...props }) => {
                   </Button>
                 </TerminalHeader>
                 {tokens.map((line, i) => (
+                  // eslint-disable-next-line react/jsx-key
                   <Lines {...getLineProps({ line, key: i })}>
                     <LineNo>{i + 1}</LineNo>
                     {line.map((token, key) => {
@@ -66,6 +67,7 @@ const CodeBlock = ({ codeString, language, ...props }) => {
                         return parsedTokens.map((token, key) => {
                           return (
                             <Line
+                              // eslint-disable-next-line react/no-children-prop
                               children={`${token} `}
                               type={token}
                               key={key}

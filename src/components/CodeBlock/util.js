@@ -8,7 +8,7 @@ function isGitCommand(line) {
   return line.includes("git");
 }
 function isComment(line) {
-  return line.includes("/*") && line.includes("*/");
+  return line.startsWith("#");
 }
 
 export { colors, isGitCommand, isComment };
