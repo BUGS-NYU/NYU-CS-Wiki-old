@@ -1,0 +1,17 @@
+name: Test Gatsby Build
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+      - run: yarn install --frozen-lockfile
+        shell: bash
+      - run: yarn build
+        shell: bash

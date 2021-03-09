@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 import Layout from "../components/Layout";
-import CodeBlock from "../components/CodeBlock";
+import CodeBlock from "../components/CodeBlock/";
 import SEO from "../components/seo";
 
 const IndexPage = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { MDXProvider } from "@mdx-js/react";
-import { CodeBlock } from "./src/components/CodeBlock";
+import CodeBlock from "./src/components/CodeBlock";
 import { preToCodeBlock } from "mdx-utils";
 
 const components = {

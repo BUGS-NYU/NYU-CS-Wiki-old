@@ -4,7 +4,7 @@ module.exports = {
     description: `A centralized hub for NYU CS resources`,
     author: `bugsnyu@gmail.com`,
     themeColor: `8041B7`,
-    // siteUrl: `https://nyu.wiki`
+    siteUrl: "https://nyucs.wiki",
   },
   plugins: [
     {
