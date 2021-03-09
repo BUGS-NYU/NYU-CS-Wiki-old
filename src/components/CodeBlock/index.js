@@ -3,11 +3,11 @@ import Highlight, { defaultProps } from "prism-react-renderer";
 import Confetti from "react-dom-confetti";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 
-import { colors, isGitCommand, isComment } from "../CodeBlock/util";
+import { colors, isGitCommand, isComment } from "./util";
 import Button from "./Button";
 import styled from "styled-components";
 
-const CodeBlock = ({ codeString, language, ...props }) => {
+const CodeBlock = ({ codeString, language, liveEditor }) => {
   const [isCopied, setIsCopied] = React.useState(false);
 
   const copyToClipboard = str => {
@@ -22,7 +22,7 @@ const CodeBlock = ({ codeString, language, ...props }) => {
     document.body.removeChild(el);
   };
 
-  if (props["react-live"]) {
+  if (liveEditor) {
     return (
       <LiveProvider code={codeString} noInline={true}>
         <LiveEditor />
@@ -125,15 +125,12 @@ const Terminal = styled.pre`
   background-color: #202947;
   position: relative;
 
-  white-space: pre-wrap; /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */
-  white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  white-space: pre-wrap;
+  word-wrap: break-word;
 `;
 
 const TerminalHeader = styled.div`
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 0.25rem;
   padding-bottom: 0.75rem;
   margin-bottom: 1rem;
