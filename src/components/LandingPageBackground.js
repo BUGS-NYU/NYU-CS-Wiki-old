@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import LeftTriangle from "../images/svg/left-triangle.svg";
 import RightTriangle from "../images/svg/right-triangle.svg";
+import Footer from "./Footer";
 const LandingPageBackground = ({ children }) => (
   <>
     <LandingPageGradient>
@@ -36,11 +37,6 @@ const RightTriangleSvg = styled(RightTriangle)`
   right: 0;
   width: 75%;
   height: 38%;
-`;
-
-const Footer = styled.footer`
-  background: #222943;
-  height: 4rem;
 `;
 
 export default LandingPageBackground;
