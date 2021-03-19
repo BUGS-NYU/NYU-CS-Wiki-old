@@ -7,8 +7,11 @@ import Article from './Article';
 const Content = (props) => {
     const {markdownRemark: post} = props.data;
     const {allMarkdownRemark: groupList} = props.data;
-    console.log(post);
-    const subItems = groupList.edges.map(group => ({
+    const subItems = groupList.edges.filter((group) => {
+        if(!group.node.frontmatter.isGroup){
+            return group;
+        }
+    }).map(group => ({
         title: group.node.frontmatter.title,
         tag: group.node.frontmatter.tag,
         path: group.node.frontmatter.path
@@ -17,7 +20,9 @@ const Content = (props) => {
         <Layout>
             <ContentContainer>
                 <GroupNav path = {post.frontmatter.path} items = {subItems} groupName = {post.frontmatter.group}></GroupNav>
-                <Article post = {post}/>
+                {!post.frontmatter.isGroup && 
+                    <Article post = {post}/>
+                }
             </ContentContainer>
         </Layout>
     )
@@ -36,6 +41,7 @@ export const pageQuery = graphql`
         path
         title
         group
+        isGroup
       }
     },
     allMarkdownRemark(filter: {frontmatter: {group: {eq: $group}}}) {
@@ -48,6 +54,7 @@ export const pageQuery = graphql`
               path
               tag
               title
+              isGroup
             }
           }
         }
