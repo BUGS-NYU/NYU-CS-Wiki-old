@@ -5,10 +5,10 @@ const GroupNav = ({items, groupName, path}) => {
     return (
         <ContentNavWrapper>
             <Slug>{path.match(/.*(?=\/)/g)}</Slug>
-            <Title>{groupName}</Title>
+            <Title>{groupName.charAt(0).toUpperCase() + groupName.slice(1)}</Title>
             <ItemsList>
                 {items.map((item) => (
-                    <li className = 'Item'><a href = {item.path}>{item.title}</a><span>{item.tag}</span></li>
+                    <li className = {path === item.path? 'activeItem': 'Item'}><a href = {item.path}>{item.title}</a>{item.tag != null && <span>{item.tag}</span>}</li>
                 ))}
             </ItemsList>  
         </ContentNavWrapper>
