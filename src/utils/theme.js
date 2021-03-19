@@ -6,6 +6,7 @@ const light = {
   sidebarBg: "#FBFBFB",
   outerBulletPoint: "#B5B5B5",
   innerBulletPoint: "#E0E0E0",
+  darkModeToggleColor: "#9A9A9A",
   // ... other light theme colors
 };
 
@@ -17,6 +18,7 @@ const dark = {
   sidebarBg: "#0F1217",
   outerBulletPoint: "#87888B",
   innerBulletPoint: "#3F4145",
+  darkModeToggleColor: "#FFFFFF",
   // ... other dark theme colors
 };
 

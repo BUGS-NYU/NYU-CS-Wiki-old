@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import HeaderBranding from "./HeaderBranding";
 import SearchBar from "./SearchBar";
+import DarkModeToggle from "./DarkModeToggle";
 
 const Header = ({ isLandingPage = false }) => (
   <HeaderContainer isLandingPage={isLandingPage}>
@@ -24,7 +25,10 @@ const Header = ({ isLandingPage = false }) => (
         </LandingPageLink>
       </div>
     ) : (
-      <SearchBar />
+      <>
+        <SearchBar />
+        <DarkModeToggle />
+      </>
     )}
   </HeaderContainer>
 );

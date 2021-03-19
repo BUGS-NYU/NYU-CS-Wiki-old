@@ -5,11 +5,9 @@ import NetlifyLogo from "../images/svg/netlify.svg";
 
 const Footer = () => (
   <FooterContainer>
-    <Text>© 2021, Built with 💜 by NYU-BUGS CLUB</Text>
+    <FooterText>© 2021, Built with 💜 by NYU-BUGS CLUB</FooterText>
     <a href="https://www.netlify.com">
-      <NetlifyLogo
-        alt="Deploys by Netlify"
-      />
+      <NetlifyLogo alt="Deploys by Netlify" />
     </a>
   </FooterContainer>
 );
@@ -23,7 +21,7 @@ const FooterContainer = styled.footer`
   height: 5rem;
 `;
 
-const Text = styled.p`
+const FooterText = styled.p`
   font-size: 0.8rem;
   color: white;
 `;

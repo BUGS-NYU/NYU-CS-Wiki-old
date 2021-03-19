@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    transition: 100ms color;
     background: var(--color-body);
     color: var(--color-text);
   }
