@@ -51,7 +51,6 @@ const ContentWrapper = styled.div`
   display: inline-block;
   background: var(--color-body);
   box-shadow: -3px 0px 6px rgba(0, 0, 0, 0.15);
-  padding: 1rem;
 `;
 
 export default Layout;

@@ -2,7 +2,8 @@ import React from 'react';
 import Layout from "../Layout";
 import { graphql } from 'gatsby';
 import GroupNav from './GroupNav';
-
+import styled from 'styled-components';
+import Article from './Article';
 const Content = (props) => {
     const {markdownRemark: post} = props.data;
     const {allMarkdownRemark: groupList} = props.data;
@@ -14,14 +15,18 @@ const Content = (props) => {
     }))
     return (
         <Layout>
-            <div>
+            <ContentContainer>
                 <GroupNav path = {post.frontmatter.path} items = {subItems} groupName = {post.frontmatter.group}></GroupNav>
-                <h1>{post.frontmatter.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            </div>
+                <Article post = {post}/>
+            </ContentContainer>
         </Layout>
     )
 }
+
+const ContentContainer = styled.div`
+height: 100%;
+width: 100%;
+`;
 
 export const pageQuery = graphql`
   query articleByPath($path: String!, $group: String!) {

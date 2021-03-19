@@ -21,6 +21,10 @@ export default GroupNav;
 const ContentNavWrapper = styled.div`
     padding-left: 3rem;
     padding-top: 3rem;
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    vertical-align: top;
 `;
 const Slug = styled.p`
 font-weight: 300;
@@ -40,10 +44,13 @@ const ItemsList = styled.ul`
   margin-left: 2rem;
   .Item, .activeItem {
     margin-top: 1rem;
-    color: var(--color-text);
-    font-size: 1.1rem;
-    font-weight: 300;
     cursor: pointer;
+    a {
+        text-decoration: none;
+        color: var(--color-text);
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
     span {
         color: #FFFFFF;
         font-size: .8rem;
