@@ -22,19 +22,18 @@ export const ThemeProvider = ({ children }) => {
 
       localStorage.setItem("color-mode", newValue);
 
-      Object.entries(COLORS).forEach(([name, colorByTheme]) => {
+      Object.entries(COLORS[newValue]).forEach(([name, colorByTheme]) => {
         const cssVar = `--color-${name}`;
-        root.style.setProperty(cssVar, colorByTheme[colorMode]);
+        root.style.setProperty(cssVar, colorByTheme);
       });
 
       rawSetColorMode(newValue);
-
-      return {
-        colorMode,
-        // eslint-disable-next-line no-unused-vars
-        setColorMode,
-      };
     }
+
+    return {
+      colorMode,
+      setColorMode,
+    };
   }, [colorMode, rawSetColorMode]);
 
   return (

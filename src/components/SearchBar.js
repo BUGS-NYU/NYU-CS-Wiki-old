@@ -23,6 +23,7 @@ const SearchBar = ({ handleSearch = f => f, focusref, onFocus }) => {
 const SearchContainer = styled.form`
   display: flex;
   width: 80%;
+  background-color: var(--color-headerBg);
 `;
 
 const SearchInput = styled.input`
@@ -31,7 +32,8 @@ const SearchInput = styled.input`
   font-size: 1rem;
   border: 0px;
   padding: 0.6rem 0.6rem 0.6rem 2.25rem;
-
+  background-color: var(--color-headerBg);
+  color: var(--color-primary);
   &:focus {
     outline: none;
   }

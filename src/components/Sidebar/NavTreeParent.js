@@ -65,7 +65,7 @@ const LinkContainer = styled(Link)`
   display: block;
   color: var(--color-text);
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--color-sidebarLine);
   cursor: pointer;
   font-weight: 500;
   text-decoration: none;
@@ -78,7 +78,7 @@ const LinkContainer = styled(Link)`
 
 const ItemContainer = styled.div`
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--color-sidebarLine);
   cursor: pointer;
   font-weight: 500;
 `;
