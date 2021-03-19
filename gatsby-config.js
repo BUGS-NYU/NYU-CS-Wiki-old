@@ -24,6 +24,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-react-svg`,
       rule: {
         include: /images\/svg/,
