@@ -5,7 +5,13 @@ import NetlifyLogo from "../images/svg/netlify.svg";
 
 const Footer = () => (
   <FooterContainer>
-    <FooterText>© 2021, Built with 💜 by NYU-BUGS CLUB</FooterText>
+    <FooterText>
+      © 2021, Built with{" "}
+      <span role="img" aria-label="Purple Heart">
+        💜
+      </span>{" "}
+      by NYU-BUGS CLUB
+    </FooterText>
     <a href="https://www.netlify.com">
       <NetlifyLogo alt="Deploys by Netlify" />
     </a>
