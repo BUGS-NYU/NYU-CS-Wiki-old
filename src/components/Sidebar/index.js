@@ -14,24 +14,6 @@ const SideBar = () => {
     {
       label: "Guides",
       url: "/guides",
-      expanded: true,
-      nodes: [
-        {
-          label: "Academic Guides",
-          url: "/guides/academic",
-          expanded: true,
-          nodes: [
-            {
-              label: "Courses",
-              url: "/guides/academic/courses",
-            },
-          ],
-        },
-        {
-          label: "Learn",
-          url: "/guides/learn",
-        },
-      ],
     },
     {
       label: "Career",
@@ -40,6 +22,17 @@ const SideBar = () => {
     {
       label: "Academics",
       url: "/academics",
+      expanded: true,
+      nodes: [
+        {
+          label: "Courses",
+          url: "/academics/courses"
+        },
+        {
+          label: "Clubs",
+          url: "/academics/clubs",
+        },
+      ],
     },
     {
       label: "Contribution Log",
