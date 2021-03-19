@@ -5,4 +5,4 @@ group: 'courses'
 tag: '12345'
 ---
 
-## I'm a class
+## I'm a class 2
