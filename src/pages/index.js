@@ -110,12 +110,14 @@ const Title = styled.h1`
   font-size: 1.25rem;
   opacity: 0.5;
   font-weight: 500;
+  color: #000000;
 `;
 
 const GuideTitle = styled.h1`
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
+  color: #000000;
 
   a {
     text-decoration: none;
@@ -126,6 +128,7 @@ const GuideTitle = styled.h1`
 const Paragraph = styled.p`
   font-size: 1rem;
   margin: 1.25rem 0;
+  color: #000000;
 `;
 
 export default IndexPage;
