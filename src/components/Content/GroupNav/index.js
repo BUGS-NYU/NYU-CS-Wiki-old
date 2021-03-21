@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { Link } from 'gatsby';
 const GroupNav = ({items, groupName, path}) => {
     return (
         <ContentNavWrapper>
@@ -8,7 +8,7 @@ const GroupNav = ({items, groupName, path}) => {
             <Title>{groupName.charAt(0).toUpperCase() + groupName.slice(1)}</Title>
             <ItemsList>
                 {items.map((item) => (
-                    <li className = {path === item.path? 'activeItem': 'Item'}><a href = {item.path}>{item.title}</a>{item.tag != null && <span>{item.tag}</span>}</li>
+                    <li className = {path === item.path? 'activeItem': 'Item'}><Link to = {item.path}>{item.title}</Link>{item.tag != null && <span>{item.tag}</span>}</li>
                 ))}
             </ItemsList>  
         </ContentNavWrapper>
