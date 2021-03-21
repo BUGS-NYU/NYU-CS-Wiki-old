@@ -14,10 +14,28 @@ const SideBar = () => {
     {
       label: "Guides",
       url: "/guides",
+      expanded: true,
+      nodes: [
+        {
+          label: "Academic Guides",
+          url: "/guides/academicguides"
+        },
+        {
+          label: "Career Guides",
+          url: "/guides/careerguides"
+        }
+      ]
     },
     {
       label: "Career",
       url: "/career",
+      expanded: true,
+      nodes: [
+        {
+          label: "Internships",
+          url: "/career/internships"
+        }
+      ]
     },
     {
       label: "Academics",

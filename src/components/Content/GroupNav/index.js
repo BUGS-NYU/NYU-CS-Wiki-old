@@ -22,20 +22,20 @@ const ContentNavWrapper = styled.div`
     padding-left: 3rem;
     padding-top: 3rem;
     display: inline-block;
-    width: 25%;
+    width: 20%;
     height: 100%;
     vertical-align: top;
 `;
 const Slug = styled.p`
 font-weight: 300;
-font-size: .9rem;
+font-size: .7rem;
 opacity: .5;
 `
 
 const Title = styled.h1`
     margin-top: 2rem;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.5rem;
 `
 
 const ItemsList = styled.ul`
@@ -48,7 +48,7 @@ const ItemsList = styled.ul`
     a {
         text-decoration: none;
         color: var(--color-text);
-        font-size: 1.1rem;
+        font-size: .9rem;
         font-weight: 300;
     }
     span {
