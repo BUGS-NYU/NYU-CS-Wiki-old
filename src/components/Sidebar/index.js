@@ -18,28 +18,39 @@ const SideBar = () => {
       nodes: [
         {
           label: "Academic Guides",
-          url: "/guides/academic",
-          expanded: true,
-          nodes: [
-            {
-              label: "Courses",
-              url: "/guides/academic/courses",
-            },
-          ],
+          url: "/guides/academicguides"
         },
         {
-          label: "Learn",
-          url: "/guides/learn",
-        },
-      ],
+          label: "Career Guides",
+          url: "/guides/careerguides"
+        }
+      ]
     },
     {
       label: "Career",
       url: "/career",
+      expanded: true,
+      nodes: [
+        {
+          label: "Internships",
+          url: "/career/internships"
+        }
+      ]
     },
     {
       label: "Academics",
       url: "/academics",
+      expanded: true,
+      nodes: [
+        {
+          label: "Courses",
+          url: "/academics/courses"
+        },
+        {
+          label: "Clubs",
+          url: "/academics/clubs",
+        },
+      ],
     },
     {
       label: "Contribution Log",
