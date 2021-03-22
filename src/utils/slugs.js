@@ -60,50 +60,54 @@ export const breakdownSitePagesToSidebar = data => {
             val => val.url === urls[1]
           );
 
-          if (!res[innerPartIdx].nodes[moreInnerPartIdx].nodes) {
-            // add inner node if it exists
-            res[innerPartIdx].nodes[moreInnerPartIdx].nodes = [
-              {
+          if (urls.length > 2) {
+            if (!res[innerPartIdx].nodes[moreInnerPartIdx].nodes) {
+              // add inner node if it exists
+              res[innerPartIdx].nodes[moreInnerPartIdx].nodes = [
+                {
+                  label: urls[2]
+                    .split("/")[3]
+                    .replace(/[-]/g, " ")
+                    .replace(/\b\w/g, c => c.toUpperCase()),
+                  url: urls[2],
+                },
+              ];
+            } else {
+              // add to most inner nodes
+              res[innerPartIdx].nodes[moreInnerPartIdx].nodes.push({
                 label: urls[2]
                   .split("/")[3]
                   .replace(/[-]/g, " ")
                   .replace(/\b\w/g, c => c.toUpperCase()),
                 url: urls[2],
-              },
-            ];
-          } else {
-            // add to most inner nodes
-            res[innerPartIdx].nodes[moreInnerPartIdx].nodes.push({
-              label: urls[2]
-                .split("/")[3]
-                .replace(/[-]/g, " ")
-                .replace(/\b\w/g, c => c.toUpperCase()),
-              url: urls[2],
-            });
+              });
+            }
           }
         } else {
           // if inner nodes exists but we need to make a more inner node
-          res[innerPartIdx].nodes.push({
-            label: urls[1]
-              .split("/")[2]
-              .replace(/[-]/g, " ")
-              .replace(/\b\w/g, c => c.toUpperCase()),
-            url: urls[1],
-          });
+          if (urls.length > 1) {
+            res[innerPartIdx].nodes.push({
+              label: urls[1]
+                .split("/")[2]
+                .replace(/[-]/g, " ")
+                .replace(/\b\w/g, c => c.toUpperCase()),
+              url: urls[1],
+            });
 
-          // if we have any more levels add them
-          if (urls.length > 2) {
-            res[innerPartIdx].nodes[
-              res[innerPartIdx].nodes.length - 1
-            ].nodes = [
-              {
-                label: urls[2]
-                  .split("/")[3]
-                  .replace(/[-]/g, " ")
-                  .replace(/\b\w/g, c => c.toUpperCase()),
-                url: urls[2],
-              },
-            ];
+            // if we have any more levels add them
+            if (urls.length > 2) {
+              res[innerPartIdx].nodes[
+                res[innerPartIdx].nodes.length - 1
+              ].nodes = [
+                {
+                  label: urls[2]
+                    .split("/")[3]
+                    .replace(/[-]/g, " ")
+                    .replace(/\b\w/g, c => c.toUpperCase()),
+                  url: urls[2],
+                },
+              ];
+            }
           }
         }
       } else {

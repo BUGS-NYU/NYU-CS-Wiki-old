@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// const path = require("path");
+const path = require("path");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const { execSync } = require("child_process");
 
@@ -43,7 +43,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const Content = require.resolve(`./src/components/Content`);
   return graphql(`
     {
       allMarkdownRemark(limit: 1000) {
@@ -83,9 +82,8 @@ exports.createPages = ({ actions, graphql }) => {
       }
       createPage({
         path: node.fields.slug,
-        component: Content,
+        component: path.resolve("src/components/templates/GuideTemplate.js"),
         context: {
-          // group: node.frontmatter.group,
           slug: node.fields.slug,
         }, // additional data can be passed via context
       });
