@@ -21,4 +21,5 @@
 <!-- ![alt-text](https://url.to.image) -->
 
 ## Checklist:
+
 - [ ] I have read the [**CONTRIBUTING** document](CONTRIBUTING.md)
