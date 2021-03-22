@@ -27,11 +27,9 @@ export const breakdownSitePagesToSidebar = data => {
       if (slug === null) return res;
       const urls = breakdownSlugIntoUrls(slug);
 
-      console.log(slug);
       let innerPart = {};
       if (res.some(val => val.url === urls[0])) {
         const innerPartIdx = res.findIndex(val => val.url === urls[0]);
-        console.log(innerPartIdx);
 
         if (!res[innerPartIdx].nodes) {
           // create inner nodes
