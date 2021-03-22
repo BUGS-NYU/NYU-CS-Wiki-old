@@ -16,14 +16,9 @@ export const breakdownSlugIntoUrls = slug => {
 // WARNING: this does a lot of confusing stuff. ask Evan what is going on if you want to modify it
 export const breakdownSitePagesToSidebar = data => {
   return data.reduce(
-    (
-      res,
-      {
-        node: {
-          context: { slug },
-        },
-      }
-    ) => {
+    (res, { node: { context } }) => {
+      if (!context) return res;
+      const { slug } = context;
       if (slug === null) return res;
       const urls = breakdownSlugIntoUrls(slug);
 
