@@ -8,4 +8,5 @@
 </h1>
 
 # Contributing
+
 This is a centralized hub for NYU CS students to find opportunities. Please take a look at our [contribution](https://github.com/BUGS-NYU/cs-resources/tree/main/contributing) directory for more information.

@@ -1,5 +1,5 @@
 ---
-title: 'BUGS NYU'
-path: '/academics/clubs/BUGSNYU'
-group: 'clubs'
+title: "BUGS NYU"
+path: "/academics/clubs/BUGSNYU"
+group: "clubs"
 ---

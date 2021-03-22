@@ -1,7 +1,7 @@
 ---
-title: 'Test'
-path: '/content'
-group: 'general'
+title: "Test"
+path: "/content"
+group: "general"
 ---
 
 ## I'm Content

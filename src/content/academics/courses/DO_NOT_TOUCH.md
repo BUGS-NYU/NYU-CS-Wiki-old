@@ -1,6 +1,6 @@
 ---
-title: 'Courses'
-path: '/academics/courses'
-group: 'courses'
-isGroup: 'True'
+title: "Courses"
+path: "/academics/courses"
+group: "courses"
+isGroup: "True"
 ---
