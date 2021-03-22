@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const Article = ({ post }) => {
+const Article = ({ frontmatter, html }) => {
   return (
     <ArticleContainer>
-      <h1> {post.frontmatter.title} </h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <h1>{frontmatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </ArticleContainer>
   );
 };

@@ -4,10 +4,10 @@ import { Link } from "gatsby";
 
 import Breadcrumb from "../../Breadcrumb";
 
-const GroupNav = ({ items, groupName, path }) => {
+const GroupNav = ({ items = [], groupName = "", path }) => {
   return (
     <ContentNavWrapper>
-      <Breadcrumb slug={path.match(/.*(?=\/)/g)[0]} />
+      <Breadcrumb slug={path} />
       <Title>{groupName.charAt(0).toUpperCase() + groupName.slice(1)}</Title>
       <ItemsList>
         {items.map((item, i) => (

@@ -1,67 +1,36 @@
 import React from "react";
+import { StaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 
 import NavTree from "./NavTreeMenu";
+import { breakdownSitePagesToSidebar } from "../../utils/slugs";
 
 const SideBar = () => {
-  // ! This should not be explicitly defined. We should store the opened structure in localstorage for less user problems
-  // ! see https://github.com/cephalization/gatsby-wiki/blob/master/src/components/navtree.js
-  const data = [
-    {
-      label: "Home",
-      url: "/home",
-    },
-    {
-      label: "Guides",
-      url: "/guides",
-      expanded: true,
-      nodes: [
-        {
-          label: "Academic Guides",
-          url: "/guides/academicguides",
-        },
-        {
-          label: "Career Guides",
-          url: "/guides/careerguides",
-        },
-      ],
-    },
-    {
-      label: "Career",
-      url: "/career",
-      expanded: true,
-      nodes: [
-        {
-          label: "Internships",
-          url: "/career/internships",
-        },
-      ],
-    },
-    {
-      label: "Academics",
-      url: "/academics",
-      expanded: true,
-      nodes: [
-        {
-          label: "Courses",
-          url: "/academics/courses",
-        },
-        {
-          label: "Clubs",
-          url: "/academics/clubs",
-        },
-      ],
-    },
-    {
-      label: "Contribution Log",
-      url: "/contributions",
-    },
-  ];
-
   return (
-    <Container>
-      <NavTree data={data} />
-    </Container>
+    <StaticQuery
+      query={graphql`
+        query {
+          allSitePage {
+            edges {
+              node {
+                context {
+                  slug
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={data => {
+        return (
+          <Container>
+            <NavTree
+              data={breakdownSitePagesToSidebar(data.allSitePage.edges)}
+            />
+          </Container>
+        );
+      }}
+    />
   );
 };
 
