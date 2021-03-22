@@ -13,6 +13,7 @@ export const breakdownSlugIntoUrls = slug => {
 };
 
 // converts the graphql query of all created pages (with slugs) to the sidebar nav data object
+// WARNING: this does a lot of confusing stuff. ask Evan what is going on if you want to modify it
 export const breakdownSitePagesToSidebar = data => {
   return data.reduce(
     (
