@@ -7,11 +7,11 @@ const GuideTemplate = ({ data: { markdownRemark } }) => {
     frontmatter,
     // headings, use this if we want a table of contents
     html,
-    fields: { slug, lastUpdatedString },
+    fields: { slug, isIndexPage, lastUpdatedString },
   } = markdownRemark;
 
   return (
-    <BlogPostLayout {...{ frontmatter, lastUpdatedString, slug }}>
+    <BlogPostLayout {...{ frontmatter, lastUpdatedString, isIndexPage, slug }}>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </BlogPostLayout>
   );
@@ -34,6 +34,7 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        isIndexPage
         gitAuthorTime
         lastUpdatedString: gitAuthorTime(formatString: "MMM Do YYYY")
       }

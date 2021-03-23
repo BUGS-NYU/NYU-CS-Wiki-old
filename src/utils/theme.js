@@ -7,6 +7,7 @@ const light = {
   outerBulletPoint: "#B5B5B5",
   innerBulletPoint: "#E0E0E0",
   sidebarLine: "#E4E4E4",
+  homeBoxBorder: "#E8E8E8",
   // ... other light theme colors
 };
 
@@ -19,6 +20,7 @@ const dark = {
   outerBulletPoint: "#87888B",
   innerBulletPoint: "#3F4145",
   sidebarLine: "#3f4145",
+  homeBoxBorder: "#4D4E50",
   // ... other dark theme colors
 };
 

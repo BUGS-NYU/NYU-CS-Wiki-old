@@ -51,7 +51,7 @@ const Container = styled.div`
   );
 
   // ! fix these
-  padding-top: 3rem;
+  padding-top: 2rem;
   padding-left: 5%;
 `;
 
