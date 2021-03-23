@@ -48,12 +48,13 @@ const Main = styled.main`
 `;
 
 const ContentWrapper = styled.div`
-  margin-left: ${({ isOpen }) => (isOpen ? "250px" : "0")};
+  position: relative;
+  left: ${({ isOpen }) => (isOpen ? "250px" : "0")};
   flex-grow: 1;
   display: inline-block;
   background: var(--color-body);
   box-shadow: -3px 0px 6px rgba(0, 0, 0, 0.15);
-  transition: margin-left 200ms;
+  transition: left 200ms;
 `;
 
 export default Layout;
