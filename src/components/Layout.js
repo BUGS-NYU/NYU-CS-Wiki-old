@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import Header from "./Header";
@@ -27,14 +27,15 @@ const Layout = ({ children, isLandingPage = false }) => {
       </ThemeProvider>
     );
   }
+  const [open, setOpen] = useState(false);
 
   return (
     <ThemeProvider>
       <GlobalStyles />
-      <Header />
+      <Header {...{ open, setOpen }} />
       <Main>
-        <SideBar />
-        <ContentWrapper>{children}</ContentWrapper>
+        <SideBar isOpen={open} />
+        <ContentWrapper isOpen={open}>{children}</ContentWrapper>
       </Main>
     </ThemeProvider>
   );
@@ -47,10 +48,12 @@ const Main = styled.main`
 `;
 
 const ContentWrapper = styled.div`
+  margin-left: ${({ isOpen }) => (isOpen ? "250px" : "0")};
   flex-grow: 1;
   display: inline-block;
   background: var(--color-body);
   box-shadow: -3px 0px 6px rgba(0, 0, 0, 0.15);
+  transition: margin-left 200ms;
 `;
 
 export default Layout;

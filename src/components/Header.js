@@ -1,37 +1,41 @@
-import * as React from "react";
+import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { Turn as Hamburger } from "hamburger-react";
 
 import HeaderBranding from "./HeaderBranding";
 import SearchBar from "./SearchBar";
 import DarkModeToggle from "./DarkModeToggle";
 
-const Header = ({ isLandingPage = false }) => (
-  <HeaderContainer isLandingPage={isLandingPage}>
-    <Link to={isLandingPage ? "/" : "/home"}>
-      <HeaderBranding isLandingPage={isLandingPage} />
-    </Link>
-    {/* Add any other options in the header below */}
-    {isLandingPage ? (
-      <div>
-        <LandingPageLink href="/home">How do I Contribute?</LandingPageLink>
-        <Separator>|</Separator>
-        <LandingPageLink href="https://github.com/BUGS-NYU/cs-resources">
-          Github
-        </LandingPageLink>
-        <Separator>|</Separator>
-        <LandingPageLink href="https://bugs-nyu.github.io">
-          BUGS@NYU
-        </LandingPageLink>
-      </div>
-    ) : (
-      <>
-        <SearchBar />
-        <DarkModeToggle />
-      </>
-    )}
-  </HeaderContainer>
-);
+const Header = ({ isLandingPage = false, open, setOpen }) => {
+  return (
+    <HeaderContainer isLandingPage={isLandingPage}>
+      <Hamburger toggled={open} toggle={setOpen} size={20} />
+      <Link to={isLandingPage ? "/" : "/home"}>
+        <HeaderBranding isLandingPage={isLandingPage} />
+      </Link>
+      {/* Add any other options in the header below */}
+      {isLandingPage ? (
+        <div>
+          <LandingPageLink href="/home">How do I Contribute?</LandingPageLink>
+          <Separator>|</Separator>
+          <LandingPageLink href="https://github.com/BUGS-NYU/cs-resources">
+            Github
+          </LandingPageLink>
+          <Separator>|</Separator>
+          <LandingPageLink href="https://bugs-nyu.github.io">
+            BUGS@NYU
+          </LandingPageLink>
+        </div>
+      ) : (
+        <>
+          <SearchBar />
+          <DarkModeToggle size={24} />
+        </>
+      )}
+    </HeaderContainer>
+  );
+};
 
 const HeaderContainer = styled.header`
   ${({ isLandingPage }) =>
@@ -57,6 +61,26 @@ const HeaderContainer = styled.header`
   a:hover,
   a:active {
     text-decoration: none;
+  }
+
+  & .hamburger-react {
+    margin-right: 1rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    & .hamburger-react {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    & .hamburger-react {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 2rem;
   }
 `;
 

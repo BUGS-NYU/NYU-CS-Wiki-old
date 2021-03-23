@@ -27,6 +27,7 @@
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-remark": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
+    "hamburger-react": "^2.4.0",
     "mdx-utils": "^0.2.0",
     "prism-react-renderer": "^1.2.0",
     "prop-types": "^15.7.2",
