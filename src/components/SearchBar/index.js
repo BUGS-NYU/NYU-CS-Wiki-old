@@ -1,12 +1,14 @@
 import algoliasearch from "algoliasearch/lite";
-import { createRef, default as React, useState } from "react";
+import { createRef, default as React, useState, useContext } from "react";
 import { InstantSearch } from "react-instantsearch-dom";
+import { ThemeContext } from "../ThemeContext";
 import StyledSearchBox from "./StyledSearchBox";
 import StyledSearchResult from "./StyledSearchResult";
 import StyledSearchRoot from "./StyledSearchRoot";
 import useClickOutside from "./useClickOutside";
 
 const SearchBar = ({ indices }) => {
+  const { colorMode } = useContext(ThemeContext);
   const rootRef = createRef();
   const [query, setQuery] = useState();
   const [hasFocus, setFocus] = useState(false);
@@ -27,6 +29,7 @@ const SearchBar = ({ indices }) => {
         <StyledSearchResult
           show={query && query.length > 0 && hasFocus}
           indices={indices}
+          mode={colorMode}
         />
       </InstantSearch>
     </StyledSearchRoot>

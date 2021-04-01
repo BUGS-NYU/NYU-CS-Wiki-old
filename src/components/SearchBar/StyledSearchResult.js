@@ -8,14 +8,17 @@ export default styled(SearchResult)`
   -webkit-overflow-scrolling: touch;
   position: absolute;
   z-index: 2;
-  right: 45%;
+  right: 44%;
   top: 100%;
   margin-top: 0.25em;
   width: 100vw;
   max-width: 30em;
   padding: 1em;
   border-radius: 2px;
-  background-color: var(--color-headerBg);
+  background-color: ${props =>
+    props.mode === "light"
+      ? "rgba(242, 241, 239, 1)"
+      : "var(--color-headerBg)"};
 
   .HitCount {
     display: flex;
@@ -32,6 +35,8 @@ export default styled(SearchResult)`
       margin-bottom: 1em;
 
       a {
+        color: ${props => (props.mode === "light" ? "black" : "white")};
+
         h4 {
           margin-bottom: 0.2em;
         }
@@ -41,16 +46,6 @@ export default styled(SearchResult)`
           color: inherit;
         }
       }
-    }
-  }
-
-  .ais-PoweredBy {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 80%;
-
-    svg {
-      width: 70px;
     }
   }
 `;
