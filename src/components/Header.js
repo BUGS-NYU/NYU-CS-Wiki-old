@@ -15,7 +15,7 @@ const searchIndices = [
 
 const Header = ({ isLandingPage = false }) => (
   <HeaderContainer isLandingPage={isLandingPage}>
-    <Link to={"/"}>
+    <Link to={isLandingPage ? "/" : "/home"}>
       <HeaderBranding isLandingPage={isLandingPage} />
     </Link>
     {/* Add any other options in the header below */}

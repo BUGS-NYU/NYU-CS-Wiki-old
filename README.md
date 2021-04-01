@@ -21,5 +21,5 @@ This is a centralized hub for NYU CS students to find opportunities. Please take
 ```
 GATSBY_ALGOLIA_APP_ID=xxxxx
 GATSBY_ALGOLIA_SEARCH_KEY=xxxxx
-GATSBY_ALGOLIA_ADMIN_KEY=xxxxx
+ALGOLIA_ADMIN_KEY=xxxxx
 ```

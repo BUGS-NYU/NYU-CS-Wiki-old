@@ -8,17 +8,14 @@ export default styled(SearchResult)`
   -webkit-overflow-scrolling: touch;
   position: absolute;
   z-index: 2;
-  right: 44%;
+  right: 36%;
   top: 100%;
   margin-top: 0.25em;
   width: 100vw;
-  max-width: 30em;
+  max-width: 35em;
   padding: 1em;
   border-radius: 2px;
-  background-color: ${props =>
-    props.mode === "light"
-      ? "rgba(242, 241, 239, 1)"
-      : "var(--color-headerBg)"};
+  background-color: var(--color-searchBoxBg);
 
   .HitCount {
     display: flex;
@@ -35,7 +32,7 @@ export default styled(SearchResult)`
       margin-bottom: 1em;
 
       a {
-        color: ${props => (props.mode === "light" ? "black" : "white")};
+        color: var(--color-text);
 
         h4 {
           margin-bottom: 0.2em;
