@@ -6,9 +6,16 @@ import HeaderBranding from "./HeaderBranding";
 import SearchBar from "./SearchBar";
 import DarkModeToggle from "./DarkModeToggle";
 
+const searchIndices = [
+  {
+    name: `Posts`,
+    title: `Posts`,
+  },
+];
+
 const Header = ({ isLandingPage = false }) => (
   <HeaderContainer isLandingPage={isLandingPage}>
-    <Link to={isLandingPage ? "/" : "/home"}>
+    <Link to={"/"}>
       <HeaderBranding isLandingPage={isLandingPage} />
     </Link>
     {/* Add any other options in the header below */}
@@ -26,7 +33,7 @@ const Header = ({ isLandingPage = false }) => (
       </div>
     ) : (
       <>
-        <SearchBar />
+        <SearchBar indices={searchIndices} />
         <DarkModeToggle />
       </>
     )}

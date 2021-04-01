@@ -6,10 +6,13 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "algoliasearch": "^4.8.6",
     "babel-plugin-styled-components": "^1.12.0",
+    "dotenv": "^8.2.0",
     "fontsource-poppins": "^4.0.0",
     "fontsource-roboto": "^4.0.0",
     "gatsby": "^3.0.1",
+    "gatsby-plugin-algolia": "^0.18.0",
     "gatsby-plugin-catch-links": "^3.0.0",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
     "gatsby-plugin-image": "^1.0.0",
@@ -34,6 +37,7 @@
     "react-dom": "^17.0.1",
     "react-dom-confetti": "^0.2.0",
     "react-helmet": "^6.1.0",
+    "react-instantsearch-dom": "^6.10.3",
     "react-live": "^2.2.3",
     "react-spring": "^8.0.27",
     "styled-components": "^5.2.1"
