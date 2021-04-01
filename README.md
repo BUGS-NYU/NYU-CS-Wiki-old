@@ -12,3 +12,14 @@
 # Contributing
 
 This is a centralized hub for NYU CS students to find opportunities. Please take a look at our [contribution](https://github.com/BUGS-NYU/cs-resources/tree/main/contributing) directory for more information.
+
+# Algolia
+
+- We use Algolia for search feature so you will need to create a free account to have access to their API
+- After signing up, you should create a `.env` file that looks like this:
+
+```
+GATSBY_ALGOLIA_APP_ID=xxxxx
+GATSBY_ALGOLIA_SEARCH_KEY=xxxxx
+GATSBY_ALGOLIA_ADMIN_KEY=xxxxx
+```
