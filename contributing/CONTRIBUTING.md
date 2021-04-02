@@ -67,7 +67,7 @@ Now, whenever you type `git push` you'll push to your own forked repository, and
 
 ### Setting up React
 
-To view the website locally, you'll need to get React up and running. Before that, you'd need node and npm installed.
+To view the website locally, you'll need to get React up and running. Before that, you'd need node and yarn installed.
 
 ## MacOS
 
@@ -85,6 +85,7 @@ brew install yarn
 After forking our repository, you can run from the root directory:
 
 ```
+yarn install
 gatsby develop
 ```
 
@@ -93,6 +94,18 @@ You should see your website at `localhost:8000`
 If you are not familiar with React, it might be to go over:
 
 - [Full Stack Open 2020](https://fullstackopen.com/en/)
+
+### [Algolia](https://www.algolia.com/)
+
+- We use Algolia as our search API. Create a free account to have access.
+- Create an index called `Posts`
+- Go to your root directory, create a `.env` file and copy the API keys into it. It should look like this:
+
+```
+GATSBY_ALGOLIA_APP_ID=xxxxx
+GATSBY_ALGOLIA_SEARCH_KEY=xxxxx
+ALGOLIA_ADMIN_KEY=xxxxx
+```
 
 ### Committing Along the Way
 
