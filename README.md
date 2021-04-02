@@ -35,7 +35,7 @@ Here's a quicker start guide:
 
 ## 💻 Development
 
-Clone the repository
+Fork and clone the repository
 
 ```
 git clone https://github.com/YOUR-USER-NAME/nyu-wiki.github.io.git
