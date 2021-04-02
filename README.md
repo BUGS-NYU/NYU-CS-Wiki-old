@@ -35,11 +35,29 @@ Here's a quicker start guide:
 
 ## 💻 Development
 
-###  MacOS
+Clone the repository
 
 ```
 git clone https://github.com/YOUR-USER-NAME/nyu-wiki.github.io.git
+```
 
+### ⚡ [Algolia](https://www.algolia.com/)
+
+Create a free account to have access.
+
+Create an index called `Posts`
+
+Go to your root directory, create a `.env` file and copy the API keys into it. It should look like this:
+
+```
+GATSBY_ALGOLIA_APP_ID=xxxxx
+GATSBY_ALGOLIA_SEARCH_KEY=xxxxx
+ALGOLIA_ADMIN_KEY=xxxxx
+```
+
+###  MacOS
+
+```
 brew install node
 brew install yarn
 
