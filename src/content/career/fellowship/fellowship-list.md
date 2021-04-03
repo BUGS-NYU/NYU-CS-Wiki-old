@@ -1,5 +1,5 @@
 ---
-title: "Fellowship List"
+title: "Fellowship List 👔"
 tag: "Fall 2021"
 ---
 
