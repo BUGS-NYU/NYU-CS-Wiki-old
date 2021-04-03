@@ -35,7 +35,7 @@ Here's a quicker start guide:
 
 ## 💻 Development
 
-Clone the repository
+- Fork and clone the repository
 
 ```
 git clone https://github.com/YOUR-USER-NAME/nyu-wiki.github.io.git
@@ -43,11 +43,11 @@ git clone https://github.com/YOUR-USER-NAME/nyu-wiki.github.io.git
 
 ### ⚡ [Algolia](https://www.algolia.com/)
 
-Create a free account to have access.
+- Create a free account to have access.
 
-Create an index called `Posts`
+- Create an index called `Posts`
 
-Go to your root directory, create a `.env` file and copy the API keys into it. It should look like this:
+- Go to your root directory, create a `.env` file and copy the API keys into it. It should look like this:
 
 ```
 GATSBY_ALGOLIA_APP_ID=xxxxx
@@ -74,9 +74,9 @@ Go to http://localhost:8000 and start coding!!!
 
 To create a guide:
 
-1. Fork the repository
-2. If you want to create a post under `Academics/Clubs`, go to `src/content/academics/clubs` and create a `.md` file.
-3. When you are done writing, make a PR!
+- Fork the repository
+- If you want to create a post under `Academics/Clubs`, go to `src/content/academics/clubs` and create a `.md` file.
+- When you are done writing, make a PR!
 
 # Contributors
 
