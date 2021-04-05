@@ -3,7 +3,7 @@
 </h1>
 <p align="center">
   <a href="https://bugs-nyu.github.io">
-    <img alt="NYU CS Wiki Logo" src="https://raw.githubusercontent.com/BUGS-NYU/cs-resources/main/src/images/svg/logo.svg" width="150" />
+    <img alt="NYU CS Wiki Logo" src="https://raw.githubusercontent.com/BUGS-NYU/nyu-cs-wiki/main/src/images/svg/logo.svg" width="150" />
   </a>
 </p>
 
@@ -27,7 +27,7 @@ BUGS@NYU believes these resources should be available to the CS community at NYU
 
 # 👨‍💻👩‍💻 Contributing
 
-This is a centralized hub for NYU CS students to find opportunities. Please take a look at our [contribution](https://github.com/BUGS-NYU/cs-resources/tree/main/contributing) directory for more information.
+This is a centralized hub for NYU CS students to find opportunities. Please take a look at our [contribution](https://github.com/BUGS-NYU/nyu-cs-wiki/tree/main/contributing) directory for more information.
 
 # 🚀🚀 Quick Start Guide
 
@@ -38,7 +38,7 @@ Here's a quicker start guide:
 - Fork and clone the repository
 
 ```
-git clone https://github.com/YOUR-USER-NAME/nyu-wiki.github.io.git
+git clone https://github.com/YOUR-USER-NAME/nyu-cs-wiki.git
 ```
 
 ### ⚡ [Algolia](https://www.algolia.com/)

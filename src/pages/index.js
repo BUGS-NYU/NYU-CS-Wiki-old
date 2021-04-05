@@ -8,9 +8,9 @@ import SEO from "../components/seo";
 
 const IndexPage = () => {
   const textBlock = `# In general, you'll need to first fork the repository to your own account, then clone it to your own computer with 
-git clone https://github.com/YOUR-USER-NAME/nyu-wiki.github.io.git
+git clone https://github.com/YOUR-USER-NAME/nyu-cs-wiki.git
 # Next you'll want to set up your local master branch to track your forked repository. You can do this with:
-git branch set-url --push origin https://github.com/YOUR-USER-NAME/nyu.wiki.github.io.git
+git branch set-url --push origin https://github.com/YOUR-USER-NAME/nyu-cs-wiki.git
 git branch -u origin/master`;
 
   return (
