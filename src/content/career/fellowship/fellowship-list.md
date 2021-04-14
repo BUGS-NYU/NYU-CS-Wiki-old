@@ -14,3 +14,5 @@ Fellowship pairs students with opportunities at start-ups or open source project
 | [Civic Digital Fellowship](https://www.codingitforward.com/civic-digital-fellowship) | Washington D.C | U.S citizenship or GC required                                          |
 | [Kleiner Perkins Fellowship](https://fellows.kleinerperkins.com/)                    | Various        |                                                                         |
 | [8VC Fellowship](https://www.8vcfellowship.com/)                                     | Various        |                                                                         |
+| [Google Season of Docs](https://developers.google.com/season-of-docs)                | Various        | For technical writers                                                   |
+| [Rewriting the Code](https://teamrtc.org/signup)                                     | Various        |                                                                         |
