@@ -2,7 +2,7 @@
 title: " 💐💐 Women in Computing NYU 💐💐"
 ---
 
-## 🌸 what is winc 🌸
+## 🌸 What Is WinC 🌸
 
 NYU Women in Computing is a student run club which provides a community for NYU students, faculty, and professionals from different companies around New York.
 <br/><br/>
@@ -13,7 +13,7 @@ Our primary mission is to provide resources and opportunities for women+ interes
 
 <br/>
 
-## 🌼 what do we do 🌼
+## 🌼 What Do We Do 🌼
 
 - tech talks (panels, coffee chats, info sessions)
 - recruiting events with tech companies (Facebook, Google, Spotify, etc.)
@@ -31,9 +31,9 @@ Our primary mission is to provide resources and opportunities for women+ interes
 
 <br/>
 
-## 🌺 how can i join 🌺##
+## 🌺 How Can I Join 🌺
 
-There are no specific requirements for becoming a member, just come to any of our events and you will become a part of NYU WinC! Our events are posted on our socials and within our mailing list (see [below](http://localhost:8000/academics/clubs/winc/#external-links--contacts)).
+There are no specific requirements for becoming a member, just come to any of our events and you will become a part of NYU WinC! Our events are posted on our socials and within our mailing list.
 <br/><br/>
 WinC also hosts eboard applications approximately twice a semester! Our next application period will happen in fall 2021.
 <br/><br/>
@@ -42,12 +42,12 @@ WinC also hosts eboard applications approximately twice a semester! Our next app
 
 <br/>
 
-## 🌷external links & contacts 🌷##
+## 🌷 External Links & Contacts 🌷
 
-- [email us](mailto:wincinfo@cs.nyu.edu)
-- [website](https://nyuwinc.org/)
-- [events](https://nyuwinc.org/google-calendar)
-- [instagram](https://www.instagram.com/nyuwinc/)
-- [mailing list](http://nyu.us10.list-manage.com/subscribe?u=3c9fd51a1e25979911efd9374&id=3133974ff2)
-- [facebook group](https://www.facebook.com/groups/wincnyu/?fref=ts)
-- [feedback form](https://docs.google.com/forms/d/e/1FAIpQLSeJrwrxHwdznm6J59z_zICBrrupcEVyEnfV_KfNj-zgz0u2jQ/viewform?usp=sf_link)
+- [Email Us](mailto:wincinfo@cs.nyu.edu)
+- [Website](https://nyuwinc.org/)
+- [Events](https://nyuwinc.org/google-calendar)
+- [Instagram](https://www.instagram.com/nyuwinc/)
+- [Mailing List](http://nyu.us10.list-manage.com/subscribe?u=3c9fd51a1e25979911efd9374&id=3133974ff2)
+- [Facebook Group](https://www.facebook.com/groups/wincnyu/?fref=ts)
+- [Feedback Form](https://docs.google.com/forms/d/e/1FAIpQLSeJrwrxHwdznm6J59z_zICBrrupcEVyEnfV_KfNj-zgz0u2jQ/viewform?usp=sf_link)
